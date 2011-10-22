@@ -53,11 +53,6 @@
 			<header role="banner" class="clearfix">
 				<h1 class="clearfix"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 				<p><?php bloginfo( 'description' ); ?></p>
-			<!--
-				
-				<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Hi, I'm Matt.</a></h1>
-				<p>Lorem ipsum dolor sit amet.</p>
-				-->
 				<?php create_color_block("color-bar"); ?>
 			</header>
 			<nav id="access" role="navigation">

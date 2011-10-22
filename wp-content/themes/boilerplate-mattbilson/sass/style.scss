@@ -17,10 +17,6 @@ $borderStyle:1px dotted #C9C9C9;
 @import "colors";
 
 /**	GENERAL	**/
-#container {
-	margin: 0 auto 0 auto;
-	max-width:800px;
-}
 
 iframe {
 	margin-bottom:20px;
@@ -29,58 +25,53 @@ iframe {
 ::-moz-selection { background: $color2; }
 ::selection { background:$color2;  }
 
+
+/**	MAIN LAYOUT NODES	**/
+#container {
+	margin: 0 auto 0 auto;
+	max-width:800px;
+}
+
+section#content {
+  padding:0 10px 0 10px;
+}
+
+#sidebar, #the-posts, #article-content {
+  float:left;
+}
+
+#the-posts, #article-content {
+  margin:auto auto 40px 0px;
+  padding-right:30px;
+  max-width: 540px;
+  border-right : $borderStyle;
+}
+
+
 header {
-    margin:0px auto 40px auto;
-    background-color:$darkgrey;
-    height:120px;
     position:relative;
+    height:92px;
+    
+    margin:0px auto 40px auto;
+    padding:25px 0 0 28px;
+    
+    background-color:$darkgrey;
     
     .color-block {
     	position:absolute;
     	bottom:0px;
-    }
-    
-    h1 {
-    	margin:25px auto auto 28px;
-    }
-    
-    p {
-    	margin:0px auto auto 28px;
-    	font-size: 20px;
+    	margin-left:-28px;
     }
     
 }
 
-.color-bar {
-    @extend .color-block;
-}
-.color-bar .color {
-	width:160px;
-	height:8px;
-	float:left;
-}
-
-
-#latest-tweet {
-  word-wrap:break-word;
-  clear:both;
-  
-  p:BEFORE {
-    content:open-quote;
-  }
-  p:AFTER {
-   content:close-quote;
-  }
-}
 #page-footer {
-    
   position:relative;
   margin:50px auto 0px auto;
-  padding-bottom:15px;
   background-color:$darkgrey;
   
   .container {
-    padding:30px 30px 0px 30px;
+    padding:30px 30px 15px 30px;
   }
 
   input#s {
@@ -92,22 +83,21 @@ header {
   }
   
   hr {
-  	margin-top:0px;
-  	clear:both;
+  	margin-top:1.5em;
   }
   
 }
 	
 #page-footer ul {
-	list-style-type: none;
-
-	margin:auto auto 0 0;
-	list-style-type: none;
 	float:left;
 	width:235px;
 	
-  &:first-child {
-  	margin-right:30px;
+  margin:0 15px 0 0;
+	
+	list-style-type: none;
+	
+  &:last-child {
+  	margin-right:0;
   }
 
   .xoxo > li {
@@ -118,28 +108,11 @@ header {
     }
   
   }
-
-  li#text-5 p:first-child {
-  	margin-bottom:10px;
-  }
   
 }
-
-li.widget_recent_entries ul, li.widget_categories ul {
-	margin-left:0;
-}
-
-
-/**	SIDEBAR	**/
-
-#sidebar, #the-posts, #article-content {
-	float:left;
-	}
-
+  
 #sidebar {
-	width:200px;
-	padding:0 0 50px 0px;
-	margin-right:10px;
+	width:209px;
 	
   ul {
       list-style-type: none;
@@ -148,8 +121,7 @@ li.widget_recent_entries ul, li.widget_categories ul {
       li {
       	padding-top: 10px;
       	border-top: $borderStyle;
-      	margin-top : 20px;
-      	margin-bottom:20px;
+      	margin : 20px 0;
         
         &:first-child {
         	border-top: none;
@@ -165,54 +137,43 @@ li.widget_recent_entries ul, li.widget_categories ul {
   }
 }
 
-  
-
-
-#the-posts, #article-content {
-	margin:auto auto 40px 10px;
-	padding-right:30px;
-	max-width: 540px;
-	border-right : $borderStyle;
-}
-
-
 /**	ARTICLES AND ENTRIES	**/
 article {
-	margin-top:40px;
-  
-  &:first-child, &:first-child h2 {
-  	margin-top:0px;
-  }
-  
-  h1, h2 {
-  	padding-bottom:15px;
-  	margin : 0 0px 20px 0;
-  	border-bottom : $borderStyle;
-  }
-  
-  .entry-content h2 {
-  	margin-top:30px;
-  }
-  
-  .entry-meta {
-  	margin-bottom : 5px;
-  }
-  
-  .color {
-  	width:8px;
-  	height:5px;
-  	float:none;
-  }
-  
-  .color-block {
-  	display: block;
-  	margin:4px 8px 0 0;
-  	float:left;
-  }
-  
-  .entry-content-column div > p:last-child {
-    margin-bottom:40px;
-  }
+  	margin-top:40px;
+    
+    &:first-child, &:first-child h2 {
+    	margin-top:0px;
+    }
+    
+    h1, h2 {
+    	padding-bottom:15px;
+    	margin : 0 0px 20px 0;
+    	border-bottom : $borderStyle;
+    }
+    
+    .entry-content h2 {
+    	margin-top:30px;
+    }
+    
+    .entry-meta {
+    	margin-bottom : 5px;
+    }
+    
+    .color {
+    	width:8px;
+    	height:5px;
+    	float:none;
+    }
+    
+    .color-block {
+    	display: block;
+    	margin:4px 8px 0 0;
+    	float:left;
+    }
+    
+    .entry-content-column div > p:last-child {
+      margin-bottom:40px;
+    }
 }
 
 	 
@@ -220,33 +181,27 @@ article {
   margin:auto auto 15px auto;
   max-width: 550px;
 }
-article.post p {
-  @extend .articleChild;
+
+article.post {
   
-  &:first-child {
-  	font-size: 18px;
-  	line-height: 24px;
+  p {
+    @extend .articleChild;
+  
+    &:last-child {
+    	margin-bottom:0px;
+    }
+    
   }
-  
-  &:last-child {
-  	margin-bottom:0px;
+ 
+  li {
+    @extend .articleChild;
+  	margin:auto auto 10px auto;
   }
   
 }
-article.post li {
-  @extend .articleChild;
-	margin:auto auto 10px auto;
-}
-
-	
-
-	
-	
 .entry-content-column {
 	margin-bottom:10px;
 	}
-
-
 
 .entry-meta-block {
 	margin-bottom:4px;
@@ -268,8 +223,6 @@ article.post li {
 .blockquote {
 	margin:10px auto 20px auto;
 	max-width:500px;
-	font-size:24px;
-	font-style:italic;
 }
 
 body.home .entry-meta {
@@ -281,11 +234,6 @@ body.home .entry-meta {
 }
 
 /**	COMMENTS	*/
-#respond {
-	margin-top:10px;
-	max-width: 540px;	
-}
-
 #commentform {
   .form-allowed-tags {
   	font-size:11px;
@@ -322,18 +270,18 @@ body.home .entry-meta {
 
 #comments-list {
 	list-style-type: none;
-	margin: 20px auto auto 0;
-	margin-bottom:20px;
+	margin: 20px auto 20px 0;
 	padding-bottom:20px;
 	border-bottom: $borderStyle;
 
 	li {
 		margin-top: 30px;
+
+  	&:first-child {
+  		margin-top: 0px;
+  	}
 	}
 
-	li:first-child {
-		margin-top: 0px;
-	}
 }
 
 .comment-author, .comment-meta {
@@ -374,37 +322,44 @@ body.home .entry-meta {
   @extend .color6;
 }
 
-#latest-tweet a {
-	text-decoration: none;
-	}
-#latest-tweet a:hover {
-	text-decoration: underline;
-	}
+
+
+.color-bar {
+    @extend .color-block;
+}
+.color-bar .color {
+  width:160px;
+  height:8px;
+  float:left;
+}
+
+
+#latest-tweet {
+  word-wrap:break-word;
+  clear:both;
+  
+  p {
+    &:BEFORE {  content:open-quote;  }
+    &:AFTER {   content:close-quote; }
+  }
+  
+  a {
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}
 
 
 
-/*	OTHER	*/
-.wide-code, .gist {
+/*	CODE HIGHLIGHTING	*/
+.wide-code {
 	width:760px !important;
-	border-top:15px solid #fff;
-	border-bottom:15px solid #fff;
-	}
-.gist {
-	font-size: .9em;
-	line-height: 1.5em;
-}
-li .gist {
-	font-size: .7em;
-	line-height: 1.85em;
-}
-.gist-file, .wide-code .wp_syntax {
-	margin-bottom:0 !important;
-}
-.gist-highlight {
-	padding:9px !important;
-}
-ol .gist {
-	margin-left:-26px;
+	border-top:20px solid #fff;
+	border-bottom:20px solid #fff;
+
+  .wp_syntax {
+  	margin-bottom:0 !important;
+  }
 }
 
 
