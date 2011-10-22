@@ -32,7 +32,7 @@
 			</section><!-- #main -->
 		<footer id="page-footer" role="contentinfo">
 			
-				<?php create_color_block(); ?>
+			<?php create_color_block("color-bar"); ?>
 			<div class="container clearfix">
 	<?php
 		/* A sidebar in the footer? Yep. You can can customize

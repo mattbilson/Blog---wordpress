@@ -58,7 +58,7 @@
 				<h1><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">Hi, I'm Matt.</a></h1>
 				<p>Lorem ipsum dolor sit amet.</p>
 				-->
-				<?php create_color_block(); ?>
+				<?php create_color_block("color-bar"); ?>
 			</header>
 			<nav id="access" role="navigation">
 			  <?php /*  Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff */ ?>

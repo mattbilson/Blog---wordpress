@@ -1,0 +1,57 @@
+
+body {
+    font-family:Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+    color: $darkgrey;
+}
+a, a:active, a:visited, a:hover {
+    color:#000;
+}
+
+header, #page-footer, #page-footer a {
+    color:#fff;
+}
+
+header h1 *, header h1, header a:active, header a:visited, header p {
+    color:#fff;
+    }
+
+
+h1, h2, h3 {
+  font-weight:normal;
+  a {
+    text-decoration: none;
+  }
+}
+h1, h2 {
+    color : #444;
+}
+h1 {
+    font-size : 30px;
+}
+h2 {
+    font-size: 30px;
+}
+h3 {
+  font-size:24px;
+}
+  
+
+#sidebar h3.widget-title {
+    font-weight:bold;
+    font-size:13px;/* 1.17em*/  
+}
+
+article p, article li {
+    font-size: 15px;
+    line-height: 25px;
+}
+
+footer #latest-tweet p {
+    font-size: 13px;
+    font-style: italic;
+    text-align: center;
+}
+
+article h3 {
+  font-size: 18px;
+}

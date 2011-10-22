@@ -1,14 +1,14 @@
 <?php
 
  
- function create_color_block($div_id = null) {
-	if ( !isset($div_id) ) {
-		$div_id = "color-block";
+ function create_color_block($div_class = null) {
+	if ( !isset($div_class) ) {
+		$div_class = "color-block";
 	}
  	
- 	echo '<div class="'.$div_id.' clearfix">';
+ 	echo '<div class="'.$div_class.' clearfix">';
  	for($i=1;$i<6;$i++) {
-		echo '<div class="color color'.$i.'"></div>';
+		echo '<div class="color"></div>';
  	}
  	echo '</div>';
  }
