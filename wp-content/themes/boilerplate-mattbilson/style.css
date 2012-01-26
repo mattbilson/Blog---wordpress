@@ -583,35 +583,41 @@ body.home .entry-meta {
   text-decoration: underline;
 }
 
+/* line 377, sass/style.scss */
+.small {
+  font-size: .85em;
+  line-height: 1.5em;
+}
+
 /*	CODE HIGHLIGHTING	*/
-/* line 380, sass/style.scss */
+/* line 384, sass/style.scss */
 .wide-code {
   width: 760px !important;
   border-top: 20px solid #fff;
   border-bottom: 20px solid #fff;
 }
-/* line 385, sass/style.scss */
+/* line 389, sass/style.scss */
 .wide-code .wp_syntax {
   margin-bottom: 0 !important;
 }
 
-/* line 393, sass/style.scss */
+/* line 397, sass/style.scss */
 .before-and-after .before, .before-and-after .after {
   float: left;
   width: 314.5px;
 }
-/* line 397, sass/style.scss */
+/* line 401, sass/style.scss */
 .before-and-after .before {
   margin-right: 20px;
 }
 
 /*	ARTICLE SPECIFICS	*/
-/* line 404, sass/style.scss */
+/* line 408, sass/style.scss */
 #flash-font-embedding-comparison-table {
   width: 100%;
 }
 
-/* line 407, sass/style.scss */
+/* line 411, sass/style.scss */
 #flash-font-embedding-comparison-table #table-container {
   margin: 20px auto;
 }
