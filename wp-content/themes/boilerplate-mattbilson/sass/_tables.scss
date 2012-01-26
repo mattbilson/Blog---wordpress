@@ -3,7 +3,6 @@ $tableBorder:1px dotted #000000;
 
 .footnote { margin-bottom : 10px; }
 
-
 td, th, tr, thead, tbody, table {
   padding: 0;
   border-spacing: 0;
@@ -19,7 +18,7 @@ thead tr th {
 th, td {
   padding: 6px;
   border-right: $tableBorder;
-}
-th:last-child, td:last-child {
-  border-right: 0;
+  &:last-child {
+    border-right: 0;
+  }
 }

@@ -1,1 +1,617 @@
-@import url("../boilerplate/style.css");body{font-family:Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;color:#444}a,a:active,a:visited,a:hover{color:#000}header,#page-footer,#page-footer a{color:#fff}header p{font-size:20px}header h1 *,header h1,header a:active,header a:visited,header p{color:#fff}h1,h2,h3{font-weight:normal}h1 a,h2 a,h3 a{text-decoration:none}h1,h2{color:#444}h1{font-size:30px}h2{font-size:30px}h3{font-size:24px}#sidebar h3.widget-title{font-weight:bold;font-size:13px}article p,article li{font-size:15px;line-height:25px}footer #latest-tweet p{font-size:13px;font-style:italic;text-align:center}article h3{font-size:18px}.blockquote{font-size:24px;font-style:italic}article.post p:first-child{font-size:18px;line-height:24px}.footnote{margin-bottom:10px}td,th,tr,thead,tbody,table{padding:0;border-spacing:0;border-collapse:collapse}table{margin-bottom:10px}thead tr th{border-bottom:1px dotted #000;font-weight:bold}th,td{padding:6px;border-right:1px dotted #000}th:last-child,td:last-child{border-right:0}.color1,#comments-list li:nth-child(5n+1) .color,.color-block .color:nth-child(5n+1),.color-bar .color:nth-child(5n+1){background-color:#33c9f4}.color2,#comments-list li:nth-child(5n+2) .color,.color-block .color:nth-child(5n+2),.color-bar .color:nth-child(5n+2){background-color:#37c7bd}.color3,#comments-list li:nth-child(5n+3) .color,.color-block .color:nth-child(5n+3),.color-bar .color:nth-child(5n+3){background-color:#fccd0d}.color4,#comments-list li:nth-child(5n+4) .color,.color-block .color:nth-child(5n+4),.color-bar .color:nth-child(5n+4){background-color:#ff8e10}.color5,#comments-list li:nth-child(5n+5) .color,.color-block .color:nth-child(5n+5),.color-bar .color:nth-child(5n+5){background-color:#ef4b1a}.color6,#comments-list li:nth-child(5n+6) .color,.color-block .color:nth-child(5n+6),.color-bar .color:nth-child(5n+6){background-color:#897f7e}.textColor1{color:#33c9f4}.textColor2{color:#37c7bd}.textColor3{color:#fccd0d}.textColor4{color:#ff8e10}.textColor5{color:#ef4b1a}.textColor6{color:#897f7e}iframe{margin-bottom:20px}::-moz-selection{background:#37c7bd}::selection{background:#37c7bd}#container{margin:0 auto 0 auto;max-width:800px}section#content{padding:0 10px 0 10px}#sidebar,#the-posts,#article-content{float:left}#the-posts,#article-content{margin:auto auto 40px 0px;padding-right:30px;max-width:540px;border-right:1px dotted #c9c9c9}header{position:relative;height:92px;margin:0px auto 40px auto;padding:25px 0 0 28px;background-color:#444}header .color-block,header .color-bar{position:absolute;bottom:0px;margin-left:-28px}#page-footer{position:relative;margin:50px auto 0px auto;background-color:#444}#page-footer .container{padding:30px 30px 15px 30px}#page-footer input#s{width:180px}#page-footer h3{margin-bottom:5px}#page-footer hr{margin-top:1.5em}#page-footer ul{float:left;width:235px;margin:0 15px 0 0;list-style-type:none}#page-footer ul:last-child{margin-right:0}#page-footer ul .xoxo > li{margin-top:10px}#page-footer ul .xoxo > li:first-child{margin-top:0}#sidebar{width:209px}#sidebar ul{list-style-type:none;margin-left:20px}#sidebar ul li{padding-top:10px;border-top:1px dotted #c9c9c9;margin:20px 0}#sidebar ul li:first-child{border-top:none;margin-top:0;padding-top:0}#sidebar ul li p{margin-top:8px}article{margin-top:40px}article:first-child,article:first-child h2{margin-top:0px}article h1,article h2{padding-bottom:15px;margin:0 0px 20px 0;border-bottom:1px dotted #c9c9c9}article .entry-content h2{margin-top:30px}article .entry-meta{margin-bottom:5px}article .color{width:8px;height:5px;float:none}article .color-block,article .color-bar{display:block;margin:4px 8px 0 0;float:left}article .entry-content-column div > p:last-child{margin-bottom:40px}.articleChild,article.post p,article.post li{margin:auto auto 15px auto;max-width:550px}article.post p:last-child{margin-bottom:0px}article.post li{margin:auto auto 10px auto}.entry-content-column{margin-bottom:10px}.entry-meta-block{margin-bottom:4px}.entry-meta-block:first-child{margin-bottom:18px}.entry-info{margin:40px auto 30px auto;padding:10px 0 10px 0;border-top:1px dotted #c9c9c9;border-bottom:1px dotted #c9c9c9}.blockquote{margin:10px auto 20px auto;max-width:500px}body.home .entry-meta{margin-top:8px}#originally-posted{margin-bottom:4px}#commentform .form-allowed-tags{font-size:11px;margin-left:120px}#commentform .form-submit{margin:20px auto auto 120px}#commentform .comment-notes{margin-bottom:20px;line-height:17px}#commentform p{margin-top:10px}#commentform p label{width:120px;display:inline-table}#commentform p input[type="text"],#commentform p textarea{width:410px;display:inline-table}.required{color:#33c9f4}#comments-list{list-style-type:none;margin:20px auto 20px 0;padding-bottom:20px;border-bottom:1px dotted #c9c9c9}#comments-list li{margin-top:30px}#comments-list li:first-child{margin-top:0px}.comment-author,.comment-meta{float:left}.comment-body{margin:8px auto auto 16px}.comment-body p{line-height:21px}#comments-list .color{width:8px;height:12px}#comments-list .color-block,#comments-list .color-bar{margin:2px 7px auto 2px}.color-bar .color{width:160px;height:8px;float:left}#latest-tweet{word-wrap:break-word;clear:both}#latest-tweet p:BEFORE{content:open-quote}#latest-tweet p:AFTER{content:close-quote}#latest-tweet a{text-decoration:none}#latest-tweet a:hover{text-decoration:underline}.wide-code{width:760px !important;border-top:20px solid #fff;border-bottom:20px solid #fff}.wide-code .wp_syntax{margin-bottom:0 !important}#flash-font-embedding-comparison-table{width:100%}#flash-font-embedding-comparison-table #table-container{margin:20px auto 20px auto}
+/*
+Theme Name: mattbilson.com
+Theme URI: http://mattbilson.com/
+Description: Child Theme of Boilerplate
+Author: Matt Bilson
+Author URI: http://mattbilson.com/
+Template: boilerplate
+Version: 1.0
+*/
+@import url("../boilerplate/style.css");
+/* line 2, sass/_typography.scss */
+body {
+  font-family: Georgia, Palatino, "Palatino Linotype", Times, "Times New Roman", serif;
+  color: #444444;
+}
+
+/* line 8, sass/_typography.scss */
+section#content h1, section#content h2, section#content h3, section#content a, section#content a:active, section#content a:visited, section#content a:hover {
+  color: #444;
+}
+
+/* line 13, sass/_typography.scss */
+#page-footer h1, #page-footer h2, #page-footer h3, #page-footer a, #page-footer a:active, #page-footer a:visited, #page-footer a:hover, #page-footer p, header h1, header h2, header h3, header a, header a:active, header a:visited, header a:hover, header p {
+  color: #fff;
+}
+
+/* line 19, sass/_typography.scss */
+h1, h2, h3 {
+  font-weight: normal;
+}
+/* line 21, sass/_typography.scss */
+h1 a, h2 a, h3 a {
+  text-decoration: none;
+}
+
+/* line 25, sass/_typography.scss */
+h1, h2 {
+  font-size: 30px;
+}
+
+/* line 28, sass/_typography.scss */
+h3 {
+  font-size: 24px;
+}
+
+/* line 33, sass/_typography.scss */
+#article-content article h2 {
+  font-size: 26px;
+}
+/* line 36, sass/_typography.scss */
+#article-content article h3 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+/* line 42, sass/_typography.scss */
+header p {
+  font-size: 20px;
+}
+
+/* line 46, sass/_typography.scss */
+#sidebar h3.widget-title {
+  font-weight: bold;
+  font-size: 13px;
+  /* 1.17em*/
+}
+
+/* line 51, sass/_typography.scss */
+article p, article li {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+/* line 56, sass/_typography.scss */
+footer #latest-tweet p {
+  font-size: 13px;
+  font-style: italic;
+  text-align: center;
+}
+
+/* line 62, sass/_typography.scss */
+.blockquote {
+  font-size: 24px;
+  font-style: italic;
+}
+
+/* line 69, sass/_typography.scss */
+article.post p:first-child {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* line 4, sass/_tables.scss */
+.footnote {
+  margin-bottom: 10px;
+}
+
+/* line 6, sass/_tables.scss */
+td, th, tr, thead, tbody, table {
+  padding: 0;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+/* line 11, sass/_tables.scss */
+table {
+  margin-bottom: 10px;
+}
+
+/* line 14, sass/_tables.scss */
+thead tr th {
+  border-bottom: 1px dotted black;
+  font-weight: bold;
+}
+
+/* line 18, sass/_tables.scss */
+th, td {
+  padding: 6px;
+  border-right: 1px dotted black;
+}
+/* line 21, sass/_tables.scss */
+th:last-child, td:last-child {
+  border-right: 0;
+}
+
+/* line 9, sass/_colors.scss */
+.color1, #comments-list li:nth-child(5n + 1) .color,
+.color-block .color:nth-child(5n + 1),
+.color-bar .color:nth-child(5n + 1) {
+  background-color: #33c9f4;
+}
+
+/* line 12, sass/_colors.scss */
+.color2, #comments-list li:nth-child(5n + 2) .color,
+.color-block .color:nth-child(5n + 2),
+.color-bar .color:nth-child(5n + 2) {
+  background-color: #37c7bd;
+}
+
+/* line 15, sass/_colors.scss */
+.color3, #comments-list li:nth-child(5n + 3) .color,
+.color-block .color:nth-child(5n + 3),
+.color-bar .color:nth-child(5n + 3) {
+  background-color: #fccd0d;
+}
+
+/* line 18, sass/_colors.scss */
+.color4, #comments-list li:nth-child(5n + 4) .color,
+.color-block .color:nth-child(5n + 4),
+.color-bar .color:nth-child(5n + 4) {
+  background-color: #ff8e10;
+}
+
+/* line 21, sass/_colors.scss */
+.color5, #comments-list li:nth-child(5n + 5) .color,
+.color-block .color:nth-child(5n + 5),
+.color-bar .color:nth-child(5n + 5) {
+  background-color: #ef4b1a;
+}
+
+/* line 24, sass/_colors.scss */
+.color6, #comments-list li:nth-child(5n + 6) .color,
+.color-block .color:nth-child(5n + 6),
+.color-bar .color:nth-child(5n + 6) {
+  background-color: #897f7e;
+}
+
+/* line 28, sass/_colors.scss */
+.textColor1 {
+  color: #33c9f4 !important;
+}
+
+/* line 31, sass/_colors.scss */
+.textColor2 {
+  color: #37c7bd !important;
+}
+
+/* line 34, sass/_colors.scss */
+.textColor3 {
+  color: #fccd0d !important;
+}
+
+/* line 37, sass/_colors.scss */
+.textColor4 {
+  color: #ff8e10 !important;
+}
+
+/* line 40, sass/_colors.scss */
+.textColor5 {
+  color: #ef4b1a !important;
+}
+
+/* line 43, sass/_colors.scss */
+.textColor6 {
+  color: #897f7e !important;
+}
+
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements in most situations.
+   nicolasgallagher.com/micro-clearfix-hack/ */
+/* line 3, sass/_boilerplate.scss */
+.clearfix:before, .before-and-after:before, .clearfix:after, .before-and-after:after {
+  content: "";
+  display: table;
+}
+
+/* line 4, sass/_boilerplate.scss */
+.clearfix:after, .before-and-after:after {
+  clear: both;
+}
+
+/* line 5, sass/_boilerplate.scss */
+.clearfix, .before-and-after {
+  zoom: 1;
+}
+
+/**	GENERAL	**/
+/* line 25, sass/style.scss */
+iframe {
+  margin-bottom: 20px;
+}
+
+/* line 29, sass/style.scss */
+::-moz-selection {
+  background: #37c7bd;
+}
+
+/* line 30, sass/style.scss */
+::selection {
+  background: #37c7bd;
+}
+
+/**	MAIN LAYOUT NODES	**/
+/* line 34, sass/style.scss */
+#container {
+  margin: 0 auto;
+  max-width: 890px;
+}
+
+/* line 39, sass/style.scss */
+section#content {
+  padding: 0 5px;
+}
+
+/* line 43, sass/style.scss */
+#sidebar, #the-posts, #article-content {
+  float: left;
+}
+
+/* line 46, sass/style.scss */
+#sidebar {
+  margin-left: 20px;
+}
+
+/* line 50, sass/style.scss */
+#the-posts, #article-content {
+  margin-bottom: 40px;
+  padding-right: 30px;
+  max-width: 649px;
+  border-right: 1px dotted #c9c9c9;
+}
+
+/* line 58, sass/style.scss */
+header {
+  position: relative;
+  height: 92px;
+  margin: 0px auto 40px auto;
+  padding: 25px 0 0 28px;
+  background-color: #444444;
+}
+/* line 67, sass/style.scss */
+header .color-block, header .color-bar {
+  position: absolute;
+  bottom: 0px;
+  margin-left: -28px;
+}
+
+/* line 75, sass/style.scss */
+#page-footer {
+  position: relative;
+  margin: 50px auto 0px auto;
+  background-color: #444444;
+}
+/* line 80, sass/style.scss */
+#page-footer .container {
+  padding: 30px 30px 15px 30px;
+}
+/* line 84, sass/style.scss */
+#page-footer input#s {
+  width: 183.667px;
+}
+/* line 88, sass/style.scss */
+#page-footer input#searchsubmit {
+  height: 25px;
+}
+/* line 92, sass/style.scss */
+#page-footer h3 {
+  margin-bottom: 5px;
+}
+/* line 96, sass/style.scss */
+#page-footer hr {
+  margin-top: 30px;
+}
+
+/* line 102, sass/style.scss */
+#page-footer ul.xoxo {
+  float: left;
+  width: 30.4%;
+  margin: 0 4% 0 0;
+  list-style-type: none;
+}
+/* line 110, sass/style.scss */
+#page-footer ul.xoxo:last-child {
+  margin-right: 0;
+}
+/* line 114, sass/style.scss */
+#page-footer ul.xoxo ul {
+  margin: 0;
+}
+/* line 117, sass/style.scss */
+#page-footer ul.xoxo > li {
+  margin-top: 10px;
+}
+/* line 120, sass/style.scss */
+#page-footer ul.xoxo > li:first-child {
+  margin-top: 0;
+}
+/* line 125, sass/style.scss */
+#page-footer ul.xoxo li.widget_recent_entries ul li {
+  margin-bottom: 3px;
+}
+/* line 127, sass/style.scss */
+#page-footer ul.xoxo li.widget_recent_entries ul li:last-child {
+  margin-bottom: 0;
+}
+
+/* line 134, sass/style.scss */
+#sidebar {
+  width: 180px;
+}
+/* line 137, sass/style.scss */
+#sidebar ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+/* line 141, sass/style.scss */
+#sidebar ul li {
+  padding-top: 10px;
+  border-top: 1px dotted #c9c9c9;
+  margin: 20px 0;
+}
+/* line 146, sass/style.scss */
+#sidebar ul li:first-child {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
+/* line 152, sass/style.scss */
+#sidebar ul li p {
+  margin-top: 8px;
+}
+
+/**	ARTICLES AND ENTRIES	**/
+/* line 161, sass/style.scss */
+article {
+  margin-top: 40px;
+}
+/* line 164, sass/style.scss */
+article:first-child, article:first-child h2 {
+  margin-top: 0px;
+}
+/* line 168, sass/style.scss */
+article h1, article h2 {
+  padding-bottom: 5px;
+  margin: 0 0px 20px 0;
+  border-bottom: 1px dotted #c9c9c9;
+}
+/* line 174, sass/style.scss */
+article .entry-content h2 {
+  margin-top: 30px;
+}
+/* line 178, sass/style.scss */
+article .entry-meta {
+  margin-bottom: 5px;
+}
+/* line 182, sass/style.scss */
+article .color {
+  width: 8px;
+  height: 5px;
+  float: none;
+}
+/* line 188, sass/style.scss */
+article .color-block, article .color-bar {
+  float: left;
+  display: block;
+  margin: 4px 8px 0 0;
+}
+
+/* line 201, sass/style.scss */
+article.post p {
+  margin-bottom: 15px;
+}
+/* line 203, sass/style.scss */
+article.post p:last-child {
+  margin-bottom: 0;
+}
+/* line 208, sass/style.scss */
+article.post li {
+  margin-bottom: 10px;
+}
+
+/* line 213, sass/style.scss */
+.entry-content-column {
+  margin-bottom: 10px;
+}
+
+/* line 217, sass/style.scss */
+.entry-meta-block {
+  margin-bottom: 4px;
+}
+/* line 220, sass/style.scss */
+.entry-meta-block:first-child {
+  margin-bottom: 18px;
+}
+
+/* line 225, sass/style.scss */
+.entry-info {
+  margin: 40px auto 30px auto;
+  padding: 10px 0;
+  border-top: 1px dotted #c9c9c9;
+  border-bottom: 1px dotted #c9c9c9;
+}
+
+/* line 232, sass/style.scss */
+blockquote {
+  margin: 10px auto 20px auto;
+  max-width: 80%;
+  quotes: '"' '"';
+  font-size: 1.8em;
+}
+/* line 237, sass/style.scss */
+blockquote:before {
+  content: open-quote;
+}
+/* line 240, sass/style.scss */
+blockquote:after {
+  content: close-quote;
+}
+/* line 244, sass/style.scss */
+blockquote p {
+  display: inline;
+  font-size: inherit !important;
+}
+
+/* line 249, sass/style.scss */
+.quote {
+  margin: 10px auto 20px auto;
+  max-width: 75%;
+}
+/* line 253, sass/style.scss */
+.quote blockquote {
+  margin: 0;
+  max-width: 100%;
+}
+/* line 257, sass/style.scss */
+.quote cite {
+  font-size: .9em;
+}
+
+/* line 262, sass/style.scss */
+body.home .entry-meta {
+  margin-top: 8px;
+}
+
+/* line 266, sass/style.scss */
+#originally-posted {
+  margin-bottom: 4px;
+}
+
+/**	COMMENTS	*/
+/* line 272, sass/style.scss */
+#commentform .form-allowed-tags {
+  font-size: 11px;
+  margin-left: 120px;
+}
+/* line 276, sass/style.scss */
+#commentform .form-submit {
+  margin: 20px auto auto 120px;
+}
+/* line 279, sass/style.scss */
+#commentform .comment-notes {
+  margin-bottom: 20px;
+  line-height: 17px;
+}
+/* line 284, sass/style.scss */
+#commentform p {
+  margin-top: 10px;
+}
+/* line 287, sass/style.scss */
+#commentform p label {
+  width: 120px;
+  display: inline-table;
+}
+/* line 293, sass/style.scss */
+#commentform p input[type="text"], #commentform p textarea {
+  width: 410px;
+  display: inline-table;
+}
+
+/* line 301, sass/style.scss */
+.required {
+  color: #33c9f4;
+}
+
+/* line 305, sass/style.scss */
+#comments-list {
+  list-style-type: none;
+  margin: 20px auto 20px 0;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #c9c9c9;
+}
+/* line 311, sass/style.scss */
+#comments-list li {
+  margin-top: 30px;
+}
+/* line 314, sass/style.scss */
+#comments-list li:first-child {
+  margin-top: 0px;
+}
+/* line 319, sass/style.scss */
+#comments-list .color {
+  width: 8px;
+  height: 12px;
+}
+/* line 324, sass/style.scss */
+#comments-list .color-block, #comments-list .color-bar {
+  margin: 2px 7px auto 2px;
+}
+
+/* line 330, sass/style.scss */
+.comment-author, .comment-meta {
+  float: left;
+}
+
+/* line 334, sass/style.scss */
+.comment-body {
+  margin: 8px auto auto 16px;
+}
+/* line 336, sass/style.scss */
+.comment-body p {
+  line-height: 21px;
+}
+
+/* line 350, sass/style.scss */
+.color-bar {
+  width: 100%;
+}
+/* line 354, sass/style.scss */
+.color-bar .color {
+  width: 20%;
+  height: 8px;
+  float: left;
+}
+
+/* line 362, sass/style.scss */
+#latest-tweet {
+  word-wrap: break-word;
+  clear: both;
+}
+/* line 367, sass/style.scss */
+#latest-tweet p:BEFORE {
+  content: open-quote;
+}
+/* line 368, sass/style.scss */
+#latest-tweet p:AFTER {
+  content: close-quote;
+}
+/* line 371, sass/style.scss */
+#latest-tweet a {
+  text-decoration: none;
+}
+/* line 373, sass/style.scss */
+#latest-tweet a:hover {
+  text-decoration: underline;
+}
+
+/*	CODE HIGHLIGHTING	*/
+/* line 380, sass/style.scss */
+.wide-code {
+  width: 760px !important;
+  border-top: 20px solid #fff;
+  border-bottom: 20px solid #fff;
+}
+/* line 385, sass/style.scss */
+.wide-code .wp_syntax {
+  margin-bottom: 0 !important;
+}
+
+/* line 393, sass/style.scss */
+.before-and-after .before, .before-and-after .after {
+  float: left;
+  width: 314.5px;
+}
+/* line 397, sass/style.scss */
+.before-and-after .before {
+  margin-right: 20px;
+}
+
+/*	ARTICLE SPECIFICS	*/
+/* line 404, sass/style.scss */
+#flash-font-embedding-comparison-table {
+  width: 100%;
+}
+
+/* line 407, sass/style.scss */
+#flash-font-embedding-comparison-table #table-container {
+  margin: 20px auto;
+}

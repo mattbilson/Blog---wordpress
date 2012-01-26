@@ -19,10 +19,12 @@
 		if ($result){
 			$jsonData = json_decode($snoopy->results, true);
 		}
-		
+		//need to turn this in to a template
 		foreach ($jsonData as $tweet) {
 			if(!$tweet['in_reply_to_user_id']) {
-				echo $tweet['text'];
+				
+				$html = '<a href="https://twitter.com/mattbilson/status/'.$tweet['id_str'].'" target="_blank">'.$tweet['text'].'</a>';
+				echo $html;
 				break;
 			}
 		}
@@ -47,9 +49,7 @@
 
 				<div id="latest-tweet">
 						<p>
-							<a href="https://twitter.com/intent/user?screen_name=mattbilson" target="_blank" onclick="popup('My Twitter profile' , 'width=700,height=480'); return false;">
-								<?php echoLatestTweet(); ?>
-							</a>
+							<?php echoLatestTweet(); ?>
 						</p>
 				</div>
 			</div>

@@ -43,8 +43,11 @@
 		wp_head();
 ?>
 
+	<!--[if (IE 7)]> -->
+		<link rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/print.css"></script>
+	<!-- <![endif]-->
 	<!--[if lt IE 9]>
-	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+		<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
 	<![endif]-->
 
 	</head>

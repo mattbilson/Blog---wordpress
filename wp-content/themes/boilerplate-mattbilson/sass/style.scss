@@ -10,11 +10,15 @@ Version: 1.0
 
 $darkgrey:#444;
 $borderStyle:1px dotted #C9C9C9;
+$totalWidth:890px;
+$sidebarWidth:180px;
+$contentWidth:$totalWidth - $sidebarWidth - 61;
 
 @import url("../boilerplate/style.css");
 @import "typography";
 @import "tables";
 @import "colors";
+@import "boilerplate";
 
 /**	GENERAL	**/
 
@@ -28,22 +32,25 @@ iframe {
 
 /**	MAIN LAYOUT NODES	**/
 #container {
-	margin: 0 auto 0 auto;
-	max-width:800px;
+	margin: 0 auto;
+	max-width:$totalWidth;
 }
 
 section#content {
-  padding:0 10px 0 10px;
+  padding:0 5px;
 }
 
 #sidebar, #the-posts, #article-content {
   float:left;
 }
+#sidebar {
+  margin-left : 20px;
+}
 
 #the-posts, #article-content {
-  margin:auto auto 40px 0px;
+  margin-bottom:40px;
   padding-right:30px;
-  max-width: 540px;
+  max-width: $contentWidth;
   border-right : $borderStyle;
 }
 
@@ -75,7 +82,11 @@ header {
   }
 
   input#s {
-    width:180px;    
+    //(totalWidth - footer container padding) / num footer columns - footer column margins - search button width (and then fudged to make it work cross-browser)
+    width:(($totalWidth - 60) /3) - 30 - 63;
+  }
+  input#searchsubmit {
+    height: 25px;    
   }
   
   h3 {
@@ -83,16 +94,16 @@ header {
   }
   
   hr {
-  	margin-top:1.5em;
+  	margin-top:30px;
   }
   
 }
 	
-#page-footer ul {
+#page-footer ul.xoxo {
 	float:left;
-	width:235px;
+	width:30.4%;
 	
-  margin:0 15px 0 0;
+  margin:0 4% 0 0;
 	
 	list-style-type: none;
 	
@@ -100,7 +111,10 @@ header {
   	margin-right:0;
   }
 
-  .xoxo > li {
+  ul {
+    margin:0;
+  } 
+  & > li {
   	margin-top:10px;
    
     &:first-child {
@@ -108,15 +122,21 @@ header {
     }
   
   }
+  li.widget_recent_entries ul li {
+    margin-bottom:3px;
+    &:last-child {
+      margin-bottom:0;
+    }
+  }
   
 }
   
 #sidebar {
-	width:209px;
+	width:$sidebarWidth;
 	
   ul {
       list-style-type: none;
-      margin-left : 20px;
+      margin-left : 0;
     
       li {
       	padding-top: 10px;
@@ -146,7 +166,7 @@ article {
     }
     
     h1, h2 {
-    	padding-bottom:15px;
+    	padding-bottom:5px;
     	margin : 0 0px 20px 0;
     	border-bottom : $borderStyle;
     }
@@ -166,36 +186,27 @@ article {
     }
     
     .color-block {
+    	float:left;
     	display: block;
     	margin:4px 8px 0 0;
-    	float:left;
     }
     
     .entry-content-column div > p:last-child {
-      margin-bottom:40px;
+    //  margin-bottom:40px;
     }
 }
 
-	 
-.articleChild { //this is only needed because you can't extend nested selectors (article.post p)
-  margin:auto auto 15px auto;
-  max-width: 550px;
-}
-
+	
 article.post {
-  
   p {
-    @extend .articleChild;
-  
+    margin-bottom:15px;
     &:last-child {
-    	margin-bottom:0px;
+      margin-bottom:0;
     }
-    
   }
  
   li {
-    @extend .articleChild;
-  	margin:auto auto 10px auto;
+    margin-bottom:10px;
   }
   
 }
@@ -213,16 +224,39 @@ article.post {
 	
 .entry-info {
 	margin:40px auto 30px auto;
-	padding:10px 0 10px 0;
-	border: {
-  	top:$borderStyle;
-  	bottom:$borderStyle;
-	}
+	padding:10px 0;
+	border-top:$borderStyle;
+  border-bottom:$borderStyle;
 }
 
-.blockquote {
+blockquote {
 	margin:10px auto 20px auto;
-	max-width:500px;
+	max-width:80%;
+
+  quotes:'"' '"';
+	&:before{
+    content: open-quote;
+  }
+  &:after{
+    content: close-quote;
+  }
+  font-size:1.8em;
+  p {
+    display:inline;
+    font-size:inherit !important;
+  }
+}
+.quote {
+	margin:10px auto 20px auto;
+	max-width:75%;
+  
+  blockquote {
+  	margin:0;
+  	max-width:100%;
+  }
+  cite {
+    font-size:.9em;    
+  }
 }
 
 body.home .entry-meta {
@@ -282,6 +316,15 @@ body.home .entry-meta {
   	}
 	}
 
+  .color {
+  	width:8px;
+  	height:12px;
+  }
+
+  .color-block {
+	 margin:2px 7px auto 2px;
+	}
+	
 }
 
 .comment-author, .comment-meta {
@@ -295,42 +338,24 @@ body.home .entry-meta {
   }
 }
 
-#comments-list .color {
-	width:8px;
-	height:12px;
-}
-#comments-list .color-block {
-	margin:2px 7px auto 2px;
-	}
 
-#comments-list li:nth-child(5n+1) .color, .color-block .color:nth-child(5n+1) {
-	@extend .color1;
+@for $i from 1 through 6 {
+  #comments-list li:nth-child( 5n + #{$i} ) .color,
+  .color-block .color:nth-child( 5n + #{$i} ) {
+    @extend .color#{$i};
+  }
 }
-#comments-list li:nth-child(5n+2) .color, .color-block .color:nth-child(5n+2) {
-	@extend .color2;
-}
-#comments-list li:nth-child(5n+3) .color, .color-block .color:nth-child(5n+3) {
-  @extend .color3;
-}
-#comments-list li:nth-child(5n+4) .color, .color-block .color:nth-child(5n+4) {
-	@extend .color4;
-}
-#comments-list li:nth-child(5n+5) .color, .color-block .color:nth-child(5n+5) {
-  @extend .color5;
-}
-#comments-list li:nth-child(5n+6) .color, .color-block .color:nth-child(5n+6) {
-  @extend .color6;
-}
-
 
 
 .color-bar {
     @extend .color-block;
-}
-.color-bar .color {
-  width:160px;
-  height:8px;
-  float:left;
+    width:100%;
+
+    .color {
+      width:20%;
+      height:8px;
+      float:left;
+    }
 }
 
 
@@ -362,11 +387,23 @@ body.home .entry-meta {
   }
 }
 
+.before-and-after {
+  @extend .clearfix;
+  
+  .before,.after {
+    float:left;
+    width:$contentWidth/2 - 10;
+  }
+  .before {
+    margin-right:20px;
+  }
+}
+
 
 /*	ARTICLE SPECIFICS	*/
 #flash-font-embedding-comparison-table {
 	width:100%;
 }
 #flash-font-embedding-comparison-table #table-container {
-	margin: 20px auto 20px auto;
+	margin: 20px auto;
 }
